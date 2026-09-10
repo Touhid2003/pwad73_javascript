@@ -6,23 +6,28 @@
     <title>Array Js</title>
 </head>
 <body>
-    <h3>JavaScript Array</h3>
+    <h3 id="demo">JavaScript Array</h3>
     <script>
 //         const fruits = ["Mango", "Apple", "Banana", ];
 //         document.write(fruits + "<br>");
 // document.write(fruits[3]);
 
-const fruits = new Array("mango", " Apple", " Banan");
-document.write(fruits + "<br>");
+// const fruits = new Array("mango", " Apple", " Banan");
+// document.write(fruits + "   ");
 
-const student = new Array( "Shron", "Touhid", "Nasir", "Sumon");
-document.write(student);
+// const student = new Array( "Shron", "Touhid", "Nasir", "Sumon");
+// document.write(student);
 
-const student = [];
+// const student = [];
 
-for(student)
+// for(student)
 
+const arr1 = ["Touhid", "Shron"];
+const arr2 = ["sumon", "mahi"];
 
+const childern = arr1.concat(arr2);
+
+document.getElementById("demo").innerHTML = childern;
 
     </script>
 </body>
