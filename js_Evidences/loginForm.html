@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    </div>
+    <form action="" name="myform" onsubmit="return validation()">
+        <h1>Login Form</h1>
+<input type="text" name="username" id="" placeholder="Enter your username"> <br> <br>
+<input type="password" name="password" id="" placeholder="Enter your password"> <br> <br>
+<input type="submit" name="submit"  value="submit" id="">
+    </form>
+
+    <script>
+        function validation(){
+            let User = document.myform.username.value;
+            let pass = document.myform.password.value;
+            let valid = false;
+
+            if(User.length < 6){
+                alert("User Name most be at least 6 character");
+                valid = false;
+                return false;
+            } else{
+                valid = true;
+            }
+            if(pass.length > 8){
+                alert("Possword within 8 character ");
+               valid = false;
+               return false;
+            }
+            if(pass ===""){
+                alert("must be Inter ");
+               valid = false;
+               return false;
+            }
+            if(valid == true){
+                alert("All are valid");
+            }
+
+
+        }
+    </script>
+    
+</body>
+</html>

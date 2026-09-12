@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="show">
+
+    </div>
+    <form action="" name="myName">
+        <input type="text" name="fName" id="" placeholder="Enter your Fast Name"> <br> <br>
+        <input type="text" name="lName" id="" placeholder="Enter your last Name"> <br> <br>
+        <input type="button" onclick="fullName()" name="submit" value="submit" id="">
+    </form>
+
+    <script>
+        // Value setting
+            document.myName.fName.value= "Nasir";
+            document.myName.lName.value = "Patwary";
+        // Value getting
+        function fullName(){
+          let fname =  document.myName.fName.value;
+          let lname =  document.myName.lName.value;
+         document.getElementById("show").innerHTML = fname + " " + lname;
+
+        }
+    </script>
+</body>
+</html>
