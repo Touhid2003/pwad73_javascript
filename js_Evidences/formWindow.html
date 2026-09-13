@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #show{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="show">
+
+    </div>
+    <form action="" name="myForm">
+        <input type="text" name="name" id="" placeholder="Enter your Name:"> <br> <br>
+        <input type="email" name="email" id="" placeholder="Enter your Email"> <br> <br>
+        <textarea name="address" id="" placeholder="Enter your Address"></textarea> <br><br>
+
+        
+
+        
+        <input type="button" name="submit" id="" onclick="mywindow()" value="Open">
+        <input type="button" name="submit" id="" onclick="mywindow.close()" value="Close">
+
+
+    </form>
+
+    <script>
+        function mywindow(){
+            let name = document.myForm.name.value;
+            let Address = document.myForm.address.value;
+            let email = document.myForm.email.value;
+            let output = "<div>";
+             output += name + "<br>";
+             output += Address + "<br>";
+             output += email + "<br>";
+             output += "</div>";
+             //document.getElementById("show").innerHTML= output;
+
+             mywindow = window.open("", "", "height:300 , width:400");
+             mywindow.document.write(output);
+            
+        }
+       
+    </script>
+    
+</body>
+</html>

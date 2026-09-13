@@ -9,7 +9,7 @@
     
 
     </div>
-    <form action="" name="myform" onsubmit="validation()">
+    <form action="" name="myform" onsubmit=" return validation()">
         <h1>Login Form</h1>
 <input type="text" name="email" id=""  placeholder="Enter your email"> <br> <br>
 <input type="password" name="password" id="" placeholder="Enter your password"> <br> <br>
@@ -21,9 +21,30 @@
           
             let email = document.myform.email.value;
             let pass = document.myform.password.value;
+            let valid = false;
+            if(
+                email.search(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)== -1){
+                    alert("Invalid Email Address");
+                    valid = false;
+                    return false;
+                
+            } else{
+               valid = true;
+                
+            }
+           if(
+                pass.search(/^[a-zA-Z0-9]{4,8}$/)== -1){
+                    alert("Invalid password");
+                    valid = false;
+                    return false;
+                
+            }else{
+                valid = true;
+            }
 
-           
-
+            if(valid == true){
+                alert("All are Valid");
+            }
 
         }
     </script>
