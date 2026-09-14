@@ -4,14 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        #show{
-            width: 200px;
-            height: 200px;
-            background-color: blue;
-            margin-bottom: 20px;
-        }
-    </style>
 </head>
 <body>
     <div id="show">
@@ -21,6 +13,24 @@
         <input type="text" name="name" id="" placeholder="Enter your Name:"> <br> <br>
         <input type="email" name="email" id="" placeholder="Enter your Email"> <br> <br>
         <textarea name="address" id="" placeholder="Enter your Address"></textarea> <br><br>
+        <label for="">Gender</label> <br> <br>
+        <input type="radio" name="gender" id="" value="Male"> Male 
+        <input type="radio" name="gender" id="" value="Female"> Female  <br> <br>
+
+        <label for="">Distric</label> <br>
+        <select name="distric" id="">
+            <option selected disabled >Select Distric</option>
+            <option value="Dhaka">Dhaka</option>
+            <option value="Bogrua">Bogura</option>
+            <option value="Rajshahi">Rajshahi</option> 
+        </select><br> <br>
+
+        <label for="">Hobbies</label> <br> 
+        <input type="checkbox" class="hobbies" value="Football" id=""> Football
+        <input type="checkbox" class="hobbies" value="Gardening" id=""> Gardening
+        <input type="checkbox" class="hobbies" value="Cricket" id=""> Cricket <br> <br>
+
+
 
         
 
@@ -36,10 +46,22 @@
             let name = document.myForm.name.value;
             let Address = document.myForm.address.value;
             let email = document.myForm.email.value;
+            let Gender = document.myForm.gender.value;
+            let distric = document.myForm.distric.value;
+            let hobbies= document.getElementsByClassName("hobbies");
+            let HobbiesOutput = "";
+            for( let i= 0; i<hobbies.length; i++){
+                if(hobbies[i].checked){
+                    HobbiesOutput += hobbies[i].value + ", ";
+                }
+            }
             let output = "<div>";
-             output += name + "<br>";
-             output += Address + "<br>";
-             output += email + "<br>";
+             output += "Name: " + name + "<br>";
+             output += "Address: " + Address + "<br>";
+             output += "Email: " + email + "<br>";
+             output += "Gender: " + Gender + "<br>";
+             output += "Distric: " + distric + "<br>";
+             output += "Hobbies: " + HobbiesOutput + "<br>";
              output += "</div>";
              //document.getElementById("show").innerHTML= output;
 
