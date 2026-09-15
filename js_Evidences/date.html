@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="myForm">
+    <input type="date" name="day"> <br>
+    <input type="submit" value="Submit" onclick="jjj(event)">
+</form>
+
+<script>
+function jjj(event) {
+    event.preventDefault();
+
+    let day = document.myForm.day.value;
+    let d = new Date(day);
+
+    let jj = d.getDay();
+
+    switch (jj) {
+        case 0:
+            alert("Sunday");
+            break;
+        case 1:
+            alert("Monday");
+            break;
+        case 2:
+            alert("Tuesday");
+            break;
+        case 3:
+            alert("Wednesday");
+            break;
+        case 4:
+            alert("Thursday");
+            break;
+        case 5:
+            alert("Friday");
+            break;
+        case 6:
+            alert("Saturday");
+            break;
+        default:
+            alert("Invalid Day");
+            break;
+    }
+}
+</script>
+
+   </script>
+</body>
+</html>
