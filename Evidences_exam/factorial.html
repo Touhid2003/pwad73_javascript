@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="demo"></h1>
+   <script>
+    let num = parseInt(prompt("Enter your number"));
+    let fact = 1;
+
+    // function myFactorial(x){
+    //     let fact = 1;
+    //     for(let i = 1; i<=x; i++){
+    //         fact = fact * i;
+
+    //     }
+         
+    //     document.write("Factioral : " + fact);
+    // }
+    // myFactorial(num);
+
+    for(let i = 1; i<=num; i++){
+        fact *= i;
+
+        
+    }
+    document.getElementById("demo"). innerHTML = fact;
+
+
+   </script> 
+</body>
+</html>
