@@ -6,48 +6,65 @@
     <title>Document</title>
   </head>
   <body>
+    <h2>Question 1: Trainee Data</h2>
+    <form name="myform">
+      <label for="name">Name:</label>
+      <input type="text" name="name" required /><br /><br />
+      <label for="contact">Contact:</label>
+      <input type="text" name="contact" required /><br /><br />
+      <label for="remarks">Remarks:</label>
+      <textarea name="remarks" required></textarea><br /><br />
+      <label for="Sex">Sex:</label>
+      <input type="radio" name="sex" value="male" required />
+      <label for="male">Male</label>
+      <input type="radio" name="sex" value="female" required />
+      <label for="female">Female</label><br /><br />
+      <label for="courses">Courses:</label>
+      <input type="checkbox" class="courses" value="NT" />
+      <label for="NT">NT</label>
+      <input type="checkbox" class="courses" value="IAD" />
+      <label for="IAD">IAD</label>
+      <input type="checkbox" class="courses" value="DDD" />
+      <label for="DDD">DDD</label>
+      <input type="checkbox" class="courses" value="ESDA" />
+      <label for="ESDA">ESDA</label><br /><br />
+      <label for="location">Location:</label>
+      <select name="location" required>
+        <option value="">Select Location</option>
+        <option>Banani</option>
+        <option>Dhanmondi</option>
+        <option>Gulshan</option>
+        <option>Khilgaon</option></select
+      ><br /><br />
+      <button type="button" onclick="getValues()">Submit</button>
+    </form>
+
     <script>
-      function myForm() {
+      function getValues() {
+        //alert("Hello");
         let name = document.myform.name.value;
-        let con = document.myform.contact.value;
-        let remaks = document.myform.remaks.value;
+        let contact = document.myform.contact.value;
+        let remarks = document.myform.remarks.value;
+        let sex = document.myform.sex.value;
+        let location = document.myform.location.value;
+          let courses= document.getElementsByClassName("courses");
+            let CoursesOutput = "";
+            for( let i= 0; i<courses.length; i++){
+                if(courses[i].checked){
+                    CoursesOutput += courses[i].value + ", ";
+                }
+            }
+        let output = "";
+        output += "Name: " + name + "<br>";
+        output += "Contact: " + contact + "<br>";
+        output += "Remarks: " + remarks + "<br>";
+        output += "Sex: " + sex + "<br>";
+        output += "Location: " + location + "<br>";
+        output += "Courses: " + CoursesOutput + "<br>";
 
-        // alert(" Name :" + name + "\n contact: " + con + "\nRemaks: " + remaks);
-        my= window.open("", "", );
-        my.document.write(" Name :" + name + "<br>" + "contact: " + con + "Remaks: " + remaks);
-        
-
+        let mywin = window.open("", "", "height:300, width:300");
+        mywin.document.write(output);
       }
     </script>
-    <h1>Trainee DATA</h1>
-    <form action="" name="myform">
-      <input type="text" name="name" placeholder="Enter your name:" /> <br />
-      <br />
-      <input type="text" name="contact" placeholder=" Enter your contact" />
-      <br />
-      <br />
-      <textarea name="remaks" id="" placeholder="Remaks"></textarea> <br />
-      <br />
-      <label for="">Sex: </label> <br />
-      <input type="radio" name="gerder" value="male" /> Male
-      <input type="radio" name="gerder" value="fmale" /> Female <br />
-      <br />
-      <label for="">Multiple Course</label> <br />
-      <input type="checkbox" name="NT" /> NT
-      <input type="checkbox" name="IAD" /> IAD
-      <input type="checkbox" name="DDD" /> DDD <br />
-      <br />
-      <select name="" id="">
-        <option value="select Option" >Select Option</option>
-        <option value="Banani">Banani</option>
-        <option value="Dhanmondi">Dhanmondi</option>
-        <option value="Mirpur">Mirpur</option>
-      </select>
-      <br />
-      <br />
-      <input type="button" name="button" value="submit" onclick="myForm()" value="open" />
-
-      
-    </form>
   </body>
 </html>
